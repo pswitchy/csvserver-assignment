@@ -16,20 +16,24 @@ docker exec -it csvserver /bin/sh
 netstat -tuln
 docker run -d --name csvserver -p 9393:9300 -e CSVSERVER_BORDER=Orange -v $(pwd)/inputFile:/csvserver/inputdata infracloudio/csvserver:latest
 curl http://localhost:9393
+```
 
 ## Part II
 
 ### Commands Executed
 
+```bash
 docker rm -f csvserver
 nano docker-compose.yaml
 nano csvserver.env
 docker-compose up -d
+```
 
 ## Part II
 
 ### Commands Executed
 
+```bash
 docker-compose down
 nano docker-compose.yaml
 nano prometheus.yml
